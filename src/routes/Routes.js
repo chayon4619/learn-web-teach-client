@@ -22,7 +22,7 @@ export const route = createBrowserRouter([
                 path: '/course',
                 element: <Course></Course>,
                 loader: () => {
-                    return fetch('http://localhost:5000/')
+                    return fetch('https://learn-web-server.vercel.app/')
                 }
             },
             {
@@ -45,14 +45,14 @@ export const route = createBrowserRouter([
                 path: '/detailPage/:id',
                 element: <DetailPage></DetailPage>,
                 loader: ({ params }) => {
-                    return fetch(`http://localhost:5000/course/${params.id}`)
+                    return fetch(`https://learn-web-server.vercel.app/course/${params.id}`)
                 }
             },
             {
                 path: '/checkout/:id',
                 element: <CheckOut></CheckOut>,
                 loader: ({ params }) => {
-                    return fetch(`http://localhost:5000/course/${params.id}`)
+                    return fetch(`https://learn-web-server.vercel.app/course/${params.id}`)
                 }
             }
         ]
