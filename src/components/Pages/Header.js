@@ -85,6 +85,16 @@ const Header = () => {
                                 Login
                             </Link>
                         </li>
+                        <li>
+                            <Link
+                                to="/register"
+                                aria-label="About us"
+                                title="About us"
+                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                            >
+                                Register
+                            </Link>
+                        </li>
                     </ul>
                     <div className="lg:hidden">
                         <button
@@ -135,7 +145,7 @@ const Header = () => {
                                                     <rect x="14" y="11" width="7" height="12" />
                                                 </svg>
                                                 <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                                                    Company
+                                                    WebTech
                                                 </span>
                                             </Link>
                                         </div>
@@ -206,6 +216,16 @@ const Header = () => {
                                                     className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
                                                     Login
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link
+                                                    to="/register"
+                                                    aria-label="About us"
+                                                    title="About us"
+                                                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                >
+                                                    Register
                                                 </Link>
                                             </li>
                                         </ul>
