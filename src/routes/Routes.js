@@ -54,7 +54,8 @@ export const route = createBrowserRouter([
                 loader: ({ params }) => {
                     return fetch(`https://learn-web-server.vercel.app/course/${params.id}`)
                 }
-            }
+            },
+
         ]
     }
 ])
