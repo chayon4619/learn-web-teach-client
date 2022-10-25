@@ -33,19 +33,19 @@ const Register = () => {
                 <h1 className="text-2xl font-bold text-center">Register</h1>
                 <form onSubmit={handleRegister} className="space-y-6 ng-untouched ng-pristine ng-valid">
                     <div className="space-y-1 text-sm">
-                        <label for="name" className="block text-gray-400">Full Name</label>
+                        <label htmlFor="name" className="block text-gray-400">Full Name</label>
                         <input type="text" name="name" id="name" placeholder="full name" className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400" required />
                     </div>
                     <div className="space-y-1 text-sm">
-                        <label for="photoURL" className="block text-gray-400">photoURL</label>
+                        <label htmlFor="photoURL" className="block text-gray-400">photoURL</label>
                         <input type="text" name="photoURL" id="photoURL" placeholder="photoURL" className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400" required />
                     </div>
                     <div className="space-y-1 text-sm">
-                        <label for="email" className="block text-gray-400">Email</label>
+                        <label htmlFor="email" className="block text-gray-400">Email</label>
                         <input type="email" name="email" id="email" placeholder="email" className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400" required />
                     </div>
                     <div className="space-y-1 text-sm">
-                        <label for="password" className="block text-gray-400">Password</label>
+                        <label htmlFor="password" className="block text-gray-400">Password</label>
                         <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400" required />
                         <div className="flex justify-end text-xs text-gray-400">
                         </div>

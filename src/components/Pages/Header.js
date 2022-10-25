@@ -6,7 +6,13 @@ import { AuthContext } from '../../context/UserContext/AuthProvider';
 
 const Header = () => {
 
-    const { user } = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext);
+
+    const handelLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.error(error))
+    }
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
@@ -80,26 +86,39 @@ const Header = () => {
                                 Blog
                             </Link>
                         </li>
-                        <li>
+                        {user?.email ? <li>
                             <Link
-                                to="/login"
+                                onClick={handelLogOut}
+                                to="/"
                                 aria-label="About us"
                                 title="About us"
                                 className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                             >
-                                Login
+                                Log Out
                             </Link>
-                        </li>
-                        <li>
-                            <Link
-                                to="/register"
-                                aria-label="About us"
-                                title="About us"
-                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                            >
-                                Register
-                            </Link>
-                        </li>
+                        </li> : <>
+                            <li>
+                                <Link
+                                    to="/login"
+                                    aria-label="About us"
+                                    title="About us"
+                                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                >
+                                    Login
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to="/register"
+                                    aria-label="About us"
+                                    title="About us"
+                                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                >
+                                    Register
+                                </Link>
+                            </li>
+                        </>
+                        }
                     </ul>
                     <div className="lg:hidden">
                         <button
@@ -213,26 +232,39 @@ const Header = () => {
                                                     Blog
                                                 </Link>
                                             </li>
-                                            <li>
+                                            {user?.email ? <li>
                                                 <Link
-                                                    to="/login"
+                                                    onClick={handelLogOut}
+                                                    to="/"
                                                     aria-label="About us"
                                                     title="About us"
                                                     className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
-                                                    Login
+                                                    Log Out
                                                 </Link>
-                                            </li>
-                                            <li>
-                                                <Link
-                                                    to="/register"
-                                                    aria-label="About us"
-                                                    title="About us"
-                                                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                                                >
-                                                    Register
-                                                </Link>
-                                            </li>
+                                            </li> : <>
+                                                <li>
+                                                    <Link
+                                                        to="/login"
+                                                        aria-label="About us"
+                                                        title="About us"
+                                                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                    >
+                                                        Login
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link
+                                                        to="/register"
+                                                        aria-label="About us"
+                                                        title="About us"
+                                                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                    >
+                                                        Register
+                                                    </Link>
+                                                </li>
+                                            </>
+                                            }
                                         </ul>
                                     </nav>
                                 </div>
