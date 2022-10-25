@@ -1,4 +1,31 @@
-# Getting Started with Create React App
+# WebTech repository
+
+## Live Link
+Hosted in firebase [Web Tech](https://mega-quiz-09.netlify.app/).
+
+## Available Scripts
+
+In the project directory, used:
+
+### React
+### React Router 
+### Tailwind
+### JavaScript
+### Express
+### vercel
+### FireBase
+
+# Resources
+Resources used :
+### HeroIcon
+### Daisy ui
+### Mamba ui
+### kitWind
+
+
+
+
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -67,4 +94,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->

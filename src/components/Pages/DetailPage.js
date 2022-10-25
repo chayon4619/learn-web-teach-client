@@ -3,7 +3,6 @@ import { Link, useLoaderData } from 'react-router-dom';
 
 const DetailPage = () => {
     const data = useLoaderData()
-    console.log(data)
     const { id, name, picture, about, price } = data
     return (
         <div className='mb-12 mt-6 flex justify-center'>
