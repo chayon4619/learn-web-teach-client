@@ -9,6 +9,7 @@ import Faq from "../components/Pages/Faq";
 import Home from "../components/Pages/Home";
 import Login from "../components/Pages/Login";
 import Register from "../components/Pages/Register";
+import PrivateRoute from "./PrivateRoute";
 
 export const route = createBrowserRouter([
     {
@@ -52,7 +53,7 @@ export const route = createBrowserRouter([
             },
             {
                 path: '/checkout/:id',
-                element: <CheckOut></CheckOut>,
+                element: <PrivateRoute><CheckOut></CheckOut></PrivateRoute>,
                 loader: ({ params }) => {
                     return fetch(`https://learn-web-server.vercel.app/course/${params.id}`)
                 }
