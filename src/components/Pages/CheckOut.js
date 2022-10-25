@@ -8,7 +8,7 @@ const CheckOut = () => {
         <div>
             <section className="my-8 bg-gray-100 text-gray-900">
                 <div className="container flex flex-col items-center p-4 mx-auto space-y-6 md:p-8">
-                    <p className="px-6 py-2 text-2xl font-semibold text-center sm:font-bold sm:text-3xl md:text-4xl lg:max-w-2xl xl:max-w-4xl text-gray-900">Thank you for buying our premium course : <span className='text-cyan-400'>{name}</span></p>
+                    <p className="px-6 py-2 text-2xl font-semibold text-center sm:font-bold sm:text-3xl md:text-4xl lg:max-w-2xl xl:max-w-4xl text-gray-900">Thank you for buying our premium course of : <span className='text-cyan-400'>{name}</span></p>
                     <div className="flex justify-center space-x-3">
                         <img src={picture} alt="" className="w-20 h-20 bg-center bg-cover rounded-md " />
                         <div>
