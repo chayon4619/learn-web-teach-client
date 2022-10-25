@@ -8,8 +8,9 @@ const DetailPage = () => {
         <div className='mb-12 mt-6 flex justify-center'>
             <div className="flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md bg-gray-200 text-gray-900">
                 <div className="flex space-x-4">
-                    <div className="flex flex-col space-y-1">
+                    <div className="flex space-y-1">
                         <Link to="/" className="text-3xl font-semibold">{name}</Link>
+                        <Link><button className="btn btn-active btn-link">Download PDF</button></Link>
                     </div>
                 </div>
                 <div>
@@ -19,7 +20,6 @@ const DetailPage = () => {
                 </div>
                 <p className='text-2xl font-bold'>Price : {price}$</p>
                 <div className='flex justify-around'>
-                    <button className="btn btn-outline">DownLoad Pdf</button>
                     <Link to={`/checkout/${id}`}>
                         <button className="btn btn-outline btn-secondary">Purchase Now</button>
                     </Link>
