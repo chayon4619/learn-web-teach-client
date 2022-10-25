@@ -1,8 +1,13 @@
 import React from 'react';
+import { useContext } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../context/UserContext/AuthProvider';
 
 const Header = () => {
+
+    const { user } = useContext(AuthContext)
+
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
         <div>

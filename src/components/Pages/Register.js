@@ -1,12 +1,37 @@
 import React from 'react';
+import { useState } from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../context/UserContext/AuthProvider';
 
 const Register = () => {
+    const [error, setError] = useState('')
+
+    const { createUser } = useContext(AuthContext)
+
+    const handleRegister = (event) => {
+        event.preventDefault();
+        const form = event.target;;
+        const name = form.name.value;
+        const photoURL = form.photoURL.value;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        createUser(email, password)
+            .then(result => {
+                const user = result.user;
+                form.reset();
+            })
+            .catch(error => {
+                setError(error)
+            })
+    }
+
     return (
         <div className='flex justify-center my-2'>
             <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-900 text-gray-100">
                 <h1 className="text-2xl font-bold text-center">Register</h1>
-                <form className="space-y-6 ng-untouched ng-pristine ng-valid">
+                <form onSubmit={handleRegister} className="space-y-6 ng-untouched ng-pristine ng-valid">
                     <div className="space-y-1 text-sm">
                         <label for="name" className="block text-gray-400">Full Name</label>
                         <input type="text" name="name" id="name" placeholder="full name" className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400" required />
@@ -26,6 +51,7 @@ const Register = () => {
                         </div>
                     </div>
                     <button className="block w-full p-3 text-center font-semibold rounded-sm text-gray-900 bg-violet-400 hover:bg-violet-500">Register</button>
+                    <p className='text-red-600'>{error.message}</p>
                 </form>
                 <div className="flex items-center pt-4 space-x-1">
                     <div className="flex-1 h-px sm:w-16 bg-gray-700"></div>
