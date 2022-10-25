@@ -1,7 +1,7 @@
 # WebTech repository
 
 ## Live Link
-Hosted in firebase [Web Tech](https://mega-quiz-09.netlify.app/).
+Hosted in firebase [Web Tech](https://learn-programming-414b5.web.app/).
 
 ## Available Scripts
 
