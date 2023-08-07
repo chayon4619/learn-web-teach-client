@@ -10,7 +10,7 @@ const DetailPage = () => {
                 <div className="flex space-x-4">
                     <div className="flex space-y-1">
                         <Link to="/" className="text-3xl font-semibold">{name}</Link>
-                        <Link><button className="btn btn-active btn-link">Download PDF</button></Link>
+                        <Link to={`/pdf/${id}`}><button className="btn btn-active btn-link">Download PDF</button></Link>
                     </div>
                 </div>
                 <div>

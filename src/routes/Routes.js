@@ -8,6 +8,7 @@ import ErrorPage from "../components/Pages/ErrorPage";
 import Faq from "../components/Pages/Faq";
 import Home from "../components/Pages/Home";
 import Login from "../components/Pages/Login";
+import PDFFile from "../components/Pages/PDFFile";
 import Register from "../components/Pages/Register";
 import PrivateRoute from "./PrivateRoute";
 
@@ -58,6 +59,13 @@ export const route = createBrowserRouter([
                     return fetch(`https://learn-web-server.vercel.app/course/${params.id}`)
                 }
             },
+            {
+                path: '/pdf/:id',
+                element: <PDFFile></PDFFile>,
+                loader: ({ params }) => {
+                    return fetch(`https://learn-web-server.vercel.app/course/${params.id}`)
+                }
+            }
 
         ]
     }
